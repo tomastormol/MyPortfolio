@@ -1,27 +1,21 @@
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import data from '../data'
-import CustomModal from '../components/CustomModal'
 
 export default function Skills() {
 
     const [currentIndex, setCurrentIndex] = useState(null);
 
-    const checkIndexIsEven = (n) => {
-        return n % 2 == 0;
-    }
-
     return (
         <View
             style={styles.container}>
-            <CustomModal />
             {data.map(({ bg, color, category, subCategories }, index) => {
                 return (
                     <TouchableOpacity key={category} onPress={() => {
                         setCurrentIndex(index === currentIndex ? null : index)
                     }}
                         style={styles.cardContainer} activeOpacity={0.8}>
-                        <View style={[styles.card, { backgroundColor: bg }, { borderWidth: checkIndexIsEven(index) ? 0.2 : 0 }]}>
+                        <View style={[styles.card, { backgroundColor: bg }]}>
                             <Text style={[styles.heading, { color }]}>{category}</Text>
                             {index === currentIndex && (
                                 <View style={styles.subCategoriesList}>
@@ -46,13 +40,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     cardContainer: {
-        flexGrow: 1,
-
+        flexGrow: 1
     },
     card: {
         flexGrow: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     heading: {
         fontSize: 28,

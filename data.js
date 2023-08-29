@@ -1,37 +1,37 @@
 export default [
     {
-        bg: '#DA5B5B',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'React Developer',
         subCategories: ['Hooks', 'Mui', 'Redux']
     },
     {
-        bg: '#C1DA5B',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'Full Stack Developer',
-        subCategories: ['JavaScript', 'C#', 'Java']
+        subCategories: ['JavaScript', 'HTML/CSS','C#', 'Java']
     },
     {
-        bg: '#5BDA99',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'Mobile',
-        subCategories: ['React Native', 'iOS']
+        subCategories: ['React Native', 'iOS Swift'] 
     },
     {
-        bg: '#5BB7DA',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'Learning',
-        subCategories: ['React', 'React Native', 'iOS']
+        subCategories: ['React', 'React Native', 'iOS Swift']
     },
     {
-        bg: '#635BDA',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'Git',
         subCategories: ['Github', 'TFS', 'Bitbucket']
     },
     {
-        bg: '#DA5BA8',
-        color: '#fff',
+        bg: '#F1F1F1',
+        color: '#3F5B98',
         category: 'Agile',
         subCategories: ['Kanban', 'Scrum']
     }

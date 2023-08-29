@@ -8,9 +8,7 @@ import ContactMe from './ContactMe';
 export default function TabNavigation({ route, navigation }) {
 
     const Tab = createBottomTabNavigator();
-
-    console.log(route)
-
+    
     return (
         <Tab.Navigator
         screenOptions={({ route }) => ({

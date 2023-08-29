@@ -16,7 +16,7 @@ export default function TabNavigation({ route, navigation }) {
             if (route.name === 'Home') {
               return (
                 focused ?
-                <Entypo name="home" size={24} color="#FA960D" />
+                <Entypo name="home" size={24} color="#56B29D" />
                 :
                 <Entypo name="home" size={24} color="black" />
 
@@ -24,21 +24,21 @@ export default function TabNavigation({ route, navigation }) {
             } else if (route.name.replace(' ', '') === 'Skills') {
               return (
                 focused ?
-                <SimpleLineIcons name="menu" size={24} color="#FA960D" />
+                <SimpleLineIcons name="menu" size={24} color="#56B29D" />
                 :
                 <SimpleLineIcons name="menu" size={24} color="black" />
               );
             } else if (route.name.replace(' ', '') === 'ContactMe') {
                 return (
                   focused ?
-                  <FontAwesome name="user" size={24} color="#FA960D" />
+                  <FontAwesome name="user" size={24} color="#56B29D" />
                   :
                   <FontAwesome name="user" size={24} color="black" />
                 );
               }
           },
           tabBarInactiveTintColor: 'gray',
-          tabBarActiveTintColor: '#FA960D',
+          tabBarActiveTintColor: '#56B29D',
         })}
       >
             <Tab.Screen name="Home" component={Home} options={{ headerShown: false }}/>

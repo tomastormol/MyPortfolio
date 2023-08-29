@@ -7,6 +7,8 @@ export default function Skills() {
 
     const [currentIndex, setCurrentIndex] = useState(null);
 
+    //TODO Install new library to remove border to the last child
+
     const checkIndexIsEven = (n) => {
         return n % 2 == 0;
     }

@@ -7,12 +7,6 @@ export default function Skills() {
 
     const [currentIndex, setCurrentIndex] = useState(null);
 
-    //TODO Install new library to remove border to the last child
-
-    const checkIndexIsEven = (n) => {
-        return n % 2 == 0;
-    }
-
     return (
         <View
             style={styles.container}>
@@ -55,7 +49,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 0.2
+        borderBottomWidth: 0.2
     },
     heading: {
         fontSize: 28,

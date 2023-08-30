@@ -23,7 +23,7 @@ export default function Skills() {
                         setCurrentIndex(index === currentIndex ? null : index)
                     }}
                         style={styles.cardContainer} activeOpacity={0.8}>
-                        <View style={[styles.card, { backgroundColor: bg }, { borderWidth: checkIndexIsEven(index) ? 0.2 : 0 }]}>
+                        <View style={[styles.card, { backgroundColor: bg }]}>
                             <Text style={[styles.heading, { color }]}>{category}</Text>
                             {index === currentIndex && (
                                 <View style={styles.subCategoriesList}>
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        borderWidth: 0.2
     },
     heading: {
         fontSize: 28,

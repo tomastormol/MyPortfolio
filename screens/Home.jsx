@@ -8,16 +8,10 @@ import { AntDesign } from '@expo/vector-icons';
 
 export default Home = () => {
 
-  const file_ur = '../assets/pdf/Resume-Tomas-Tortosa-Molto.pdf'
-
   const [fontsLoaded] = useFonts({
     'Ubuntu-Regular': require('../assets/fonts/Ubuntu-Regular.ttf'),
     'Ubuntu-Bold': require('../assets/fonts/Ubuntu-Bold.ttf'),
   });
-
-  async function webBrowserPDF() {
-    await WebBrowser.openBrowserAsync('https://www.linkedin.com/in/tomas-tortosa-molto/');
-  }
 
   if (!fontsLoaded) {
     return (

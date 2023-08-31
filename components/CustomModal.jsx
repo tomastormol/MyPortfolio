@@ -1,29 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Alert, Modal, StyleSheet, Text, Pressable, View } from 'react-native';
+import React from 'react';
+import { Modal, StyleSheet, Text, Pressable, View } from 'react-native';
 
-export default CustomModal = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+export default CustomModal = ({ showModal, setShowModal }) => {
 
-  useEffect(() => {
-    setModalVisible(true)
-  }, [])
+  console.log(showModal)
 
   return (
     <View style={styles.centeredView}>
       <Modal
         animationType="slide"
         transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert('Modal has been closed.');
-          setModalVisible(!modalVisible);
-        }}>
+        visible={showModal}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>Hi! Try clicking on a section</Text>
             <Pressable
               style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}>
+              onPress={() => setShowModal(!showModal)}>
               <Text style={styles.textStyle}>Great!</Text>
             </Pressable>
           </View>
@@ -33,13 +26,11 @@ export default CustomModal = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 0,
   },
   modalView: {
     backgroundColor: 'white',

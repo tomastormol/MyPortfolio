@@ -6,11 +6,11 @@ import CustomModal from '../components/CustomModal'
 export default function Skills() {
 
     const [currentIndex, setCurrentIndex] = useState(null);
+    const [showModal, setShowModal] = useState(true)
 
     return (
         <View
             style={styles.container}>
-            <CustomModal />
             {data.map(({ bg, color, category, subCategories }, index) => {
                 return (
                     <TouchableOpacity key={category} onPress={() => {
@@ -32,18 +32,23 @@ export default function Skills() {
                     </TouchableOpacity>
                 )
             })}
+            {showModal && (
+                <CustomModal showModal={showModal} setShowModal={setShowModal} />
+            )}
         </View>
     )
 }
 
 const styles = StyleSheet.create({
+    textHello: {
+        flex: 1
+    },
     container: {
         flex: 1,
         justifyContent: 'center'
     },
     cardContainer: {
         flexGrow: 1,
-
     },
     card: {
         flexGrow: 1,

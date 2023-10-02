@@ -5,6 +5,7 @@ import { useFonts } from 'expo-font';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+// import { Platform } from 'react-native'
 
 export default Home = () => {
 
@@ -81,6 +82,11 @@ const styles = StyleSheet.create({
     color: '#56B29D',
     marginBottom: 30
   },
+  // fontSize: Platform.select({
+  //   ios: 10,
+  //   android: 12,
+  //   default: 11
+  // }),
   touchable: {
     flexDirection: 'row',
     gap: 12,

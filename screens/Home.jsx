@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image, TouchableOpacity, Linking } from 'react-native'
+import { Text, StyleSheet, View, Image, TouchableOpacity, Linking, Platform } from 'react-native'
 import React from 'react'
 import profile from '../assets/Profile.jpg'
 import { useFonts } from 'expo-font';
@@ -6,6 +6,20 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 // import { Platform } from 'react-native'
+
+// const AppBar = Platform.select({
+//   ios: () => require('./IOSAppBar.jsx').default,
+//   default: () => require('./AndroidAppBar.jsx').default
+// })()
+
+// Mejor forma: Poner fichero.ios y al importar el componente, quitarle la extensión. Ejemplo:
+// AppBar.ios.jsx
+// Importar AppBar
+
+// Formulario probar React Hook Form
+//Validaciones para formularios con YUP
+
+// Usar Typescript
 
 export default Home = () => {
 
